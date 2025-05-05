@@ -1,0 +1,76 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 260 70% 98%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 260 70% 74%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 195 95% 48%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 260 70% 90%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Comic Neue', cursive;
+  }
+}
+
+@layer components {
+  .waffle-bg {
+    @apply bg-gradient-to-br from-waffle-purple/10 via-background to-waffle-teal/10;
+  }
+  
+  .waffles-card {
+    @apply bg-white p-6 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl;
+  }
+  
+  .waffle-btn {
+    @apply px-5 py-3 rounded-md font-bold text-white transition-all duration-300 transform hover:scale-105 active:scale-95;
+  }
+  
+  .waffle-btn-primary {
+    @apply waffle-btn bg-waffle-purple hover:bg-waffle-purple/90;
+  }
+  
+  .waffle-btn-secondary {
+    @apply waffle-btn bg-waffle-teal hover:bg-waffle-teal/90;
+  }
+  
+  .experience-area {
+    @apply p-8 rounded-xl bg-white shadow-md;
+  }
+}
